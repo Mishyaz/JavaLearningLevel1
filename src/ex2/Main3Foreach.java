@@ -12,6 +12,7 @@ public class Main3Foreach {
                 cells[i][j] = '.';
             }
         }
+
         for (char[] row : cells) {
             for (char c : row) {
                 System.out.print(c + " ");

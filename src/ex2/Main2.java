@@ -12,6 +12,7 @@ public class Main2 {
                 cells[i][j] = '.';
             }
         }
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < cells[i].length; j++) {
                 System.out.print(cells[i][j] + " ");
