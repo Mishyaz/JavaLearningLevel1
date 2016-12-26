@@ -1,4 +1,4 @@
-package xOGame;
+package ex0XOGame;
 
 public class Main {
     public static void main(String[] args) {
