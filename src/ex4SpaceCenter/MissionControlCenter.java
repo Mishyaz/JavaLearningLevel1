@@ -1,9 +1,9 @@
-package ex4;
+package ex4SpaceCenter;
 
 public class MissionControlCenter {
-    SpaceShip currentSpaceShip;
+    Flyable currentSpaceShip;
 
-    public void setCurrentSpaceShip(SpaceShip currentSpaceShip) {
+    public void setCurrentFlyable(Flyable currentSpaceShip) {
         this.currentSpaceShip = currentSpaceShip;
     }
 
@@ -13,6 +13,6 @@ public class MissionControlCenter {
             System.out.println("Обратный отсчет:" + i);
         }
         System.out.println("Пуск");
-        currentSpaceShip.lanch();
+        currentSpaceShip.launch();
     }
 }

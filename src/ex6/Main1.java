@@ -10,7 +10,13 @@ public class Main1 {
         animals[3] = new Fox();
 
         for (Animal animal : animals) {
-            animal.voice();
+            if (animal instanceof Cat) {
+                ((Cat) animal).destroySofa();
+            } else if (animal instanceof Dog) {
+                animal.voice();
+            }
         }
+
+
     }
 }

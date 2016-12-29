@@ -1,6 +1,6 @@
-package ex4;
+package ex4SpaceCenter;
 
-public class SpaceShip {
+public class SpaceShip implements Flyable{
     Step[] steps;
     Pilot pilot;
     String name;
@@ -9,7 +9,10 @@ public class SpaceShip {
         this.pilot = pilot;
     }
 
-    void lanch() {
+    @Override
+    public void launch() {
         System.out.println("Корабль запущен c пилотом: " + pilot.name);
     }
+
+
 }

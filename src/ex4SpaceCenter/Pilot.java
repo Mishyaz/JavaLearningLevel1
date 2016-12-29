@@ -1,4 +1,4 @@
-package ex4;
+package ex4SpaceCenter;
 
 public class Pilot {
     String name;
