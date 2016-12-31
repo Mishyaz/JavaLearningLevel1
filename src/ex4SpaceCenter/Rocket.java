@@ -11,4 +11,9 @@ public class Rocket implements Flyable {
     public void launch() {
         System.out.println("Rocket is launched with " + sputnik);
     }
+
+    @Override
+    public void landing() {
+
+    }
 }
