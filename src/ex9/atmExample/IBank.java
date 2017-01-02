@@ -1,4 +1,4 @@
-package ex9.atmexample;
+package ex9.atmExample;
 
 public interface IBank {
 }

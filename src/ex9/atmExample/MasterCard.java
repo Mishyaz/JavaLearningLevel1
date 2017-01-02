@@ -1,4 +1,4 @@
-package ex9.atmexample;
+package ex9.atmExample;
 
 public class MasterCard implements ICard {
     private int uin;
