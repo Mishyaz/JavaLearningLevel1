@@ -49,5 +49,30 @@ public class Main {
         System.out.println(map);
         System.out.println(map.keySet());
         System.out.println(map.values());
+
+        Map<String, Person> mapname = new HashMap();
+//        Map<String, Person> mapname = new LinkedHashMap<>();
+        mapname.put("friend", new Person("Tommy", 10));
+        mapname.put("vip", new Person("Nommy", 30));
+        System.out.println(mapname.get("friend").name);
+
+        for (Person person : mapname.values()) {
+            System.out.println(person.name);
+        }
+        Map<Person, String> tagPerson = new HashMap<>();
+        tagPerson.put(new Person("Tommy", 20), "friend");
+        tagPerson.put(new Person("Nommy", 17), "friend");
+        tagPerson.put(new Person("Ammy", 15), "friend");
+        tagPerson.put(new Person("Nommy", 30), "vip");
+
+        System.out.println(tagPerson);
+
+        System.out.println(new HashSet<String>(tagPerson.values()));
+
+        for (Map.Entry<Person, String> personStringEntry : tagPerson.entrySet()) {
+            if (personStringEntry.getValue().equals("friend")) {
+                System.out.println(personStringEntry.getKey().name);
+            }
+        }
     }
 }
