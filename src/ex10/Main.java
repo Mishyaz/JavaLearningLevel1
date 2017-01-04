@@ -8,7 +8,6 @@ public class Main {
         List<String> list; //упорядченный, допускаются дубликаты
         Set set; //неупорядоченный, дубликатов нет
 //        Queue queue;
-
         Map<Integer, Character> map; //ключ -> значение
 
         list = new ArrayList<>(); //массив
@@ -31,7 +30,9 @@ public class Main {
         System.out.println("-----SET-----");
 
         set = new HashSet();
-//        set = new LinkedHashSet();
+        set = new LinkedHashSet();
+        set = new TreeSet();
+
         System.out.println(set.add("java"));
         System.out.println(set.add("java"));
         set.add("swing");

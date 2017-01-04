@@ -3,9 +3,9 @@ package ex8XOGameGraphic.Model;
 public class Field {
     public enum Type {X, O, NOT_SET}
 
-    Type[][] cells;
+    private Type[][] cells;
 
-    public Field() {
+    Field() {
         cells = new Type[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -14,7 +14,7 @@ public class Field {
         }
     }
 
-    public void show() {
+    void show() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 switch (cells[i][j]) {
@@ -34,7 +34,7 @@ public class Field {
         System.out.println();
     }
 
-    public void doShoot(Point point, Type type) {
+    void doShoot(Point point, Type type) {
         //TODO проверка
         if (cells[point.getX()][point.getY()] == Type.NOT_SET) {
             cells[point.getX()][point.getY()] = type;
