@@ -21,5 +21,11 @@ public class Main {
         new Thread(new Recipe()).start();
         new Thread(new Recipe()).start();
         new Thread(new Recipe()).start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Анонимный внутренний Повар");
+            }
+        });
     }
 }
