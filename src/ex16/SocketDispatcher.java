@@ -3,15 +3,25 @@ package ex16;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.ServerSocket;
 import java.net.Socket;
 
-public class HttpServer {
-    public static void start() throws IOException {
-        ServerSocket serverSocket = new ServerSocket(8085);
+public class SocketDispatcher implements Runnable {
+    private Socket socket;
 
-        Socket socket = serverSocket.accept();
+    public SocketDispatcher(Socket socket) {
+        this.socket = socket;
+    }
 
+    @Override
+    public void run() {
+        try {
+            test(socket);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    static void test(Socket socket) throws IOException {
         InputStream inputStream = socket.getInputStream();
         OutputStream outputStream = socket.getOutputStream();
 
@@ -32,6 +42,7 @@ public class HttpServer {
         String resultText = header + html;
 
         outputStream.write(resultText.getBytes());
-        serverSocket.close();
     }
 }
+
+
